@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+service nginx start &
+tr-venv/bin/twist transitrelay --port=tcp:4001
