@@ -1,11 +1,8 @@
-FROM ubuntu:18.04
+FROM python:3.10.13-bullseye
 EXPOSE 4001/tcp
-RUN apt-get update -y && apt-get install -y \
-    python-virtualenv \
-    python-pip
-RUN virtualenv tr-venv
+RUN python3 -venv tr-venv
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 RUN tr-venv/bin/pip install magic-wormhole-transit-relay
 CMD ["tr-venv/bin/twist", "transitrelay", "--port=tcp:4001"]
 
