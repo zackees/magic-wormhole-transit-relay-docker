@@ -1,4 +1,5 @@
 FROM python:3.10.13-bullseye
+RUN apt-get update && apt-get install -y python3-twisted
 EXPOSE 4001/tcp
 RUN python3 -m venv tr-venv
 COPY requirements.txt requirements.txt

@@ -1,6 +1,2 @@
-mayavi==4.6.2
-traitsui==6.1.3
-traits==5.2.0
-numpy==1.17.4
-pyface==6.1.2
+
 magic-wormhole-transit-relay
